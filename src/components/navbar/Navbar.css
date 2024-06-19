@@ -1,0 +1,44 @@
+.container__nav{
+  display: flex;
+  align-items: center;
+  margin-inline: auto;
+  justify-content: space-between;
+  margin-top: 25px;
+  padding: 10px 0;
+}
+.logo{
+  display: block;
+}
+
+ .logo > img{
+  display: block;
+  width: 50%;
+  height: 70%;
+  border: 1px solid blue;
+}
+
+.nav__navlinks{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.navlink {
+  color: #ABB2BF;
+  display: block;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition:  0.1s ease-out;
+}
+
+.navlink:hover{
+  color: white;
+  translate: 0px 2px;
+}
+
+/* .navlink.active{
+  color: #C778DD;
+} */
