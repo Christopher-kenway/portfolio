@@ -40,7 +40,7 @@ const Project = () => {
   ];
   return (
     <div className="projects">
-      <div className="project__head">
+      <div className="sectiontitle__head">
         <h2>#Projects</h2>
         <div className="horizontal__line"></div>
         <span>
@@ -48,16 +48,19 @@ const Project = () => {
         </span>
       </div>
 
-      <Grid className="project-list">
+      <Grid container spacing={1} className="project-list">
         {Projects.map((project, index) => (
-          <Card className="project-card" key={index} sx={{ maxWidth: 345 }}>
+          <Card className="project-card" key={index} sx={{ maxWidth: 360 }}>
             <CardMedia
               className="card-media"
-              sx={{ height: 140 }}
+              sx={{ height: 230 }}
               image={project.imageUrl}
               title={project.title}
             />
             <CardContent className="card-content">
+              <Typography gutterBottom variant="h7" component="div">
+                {project.tools}
+              </Typography>
               <Typography gutterBottom variant="h5" component="div">
                 {project.title}
               </Typography>

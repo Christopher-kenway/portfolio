@@ -42,3 +42,31 @@ body,
 ::-webkit-scrollbar-track:hover{
   background: #555;
 }
+
+
+.sectiontitle__head{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  flex-grow: 1;
+}
+
+.sectiontitle__head > span{
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.sectiontitle__head > h2{
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.horizontal__line{
+  display: flex;
+  width: 511px;
+  border: 1px solid #C778DD;
+}

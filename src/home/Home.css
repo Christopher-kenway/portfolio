@@ -68,7 +68,7 @@ position: relative;
 }
 
 .top-box{
-  border: 1px solid grey;
+  border: 1px solid #ABB2BF;
   padding: 32px;
   font-size: 24px;
   font-weight: 400;
@@ -77,9 +77,9 @@ position: relative;
 
 .bottom-box{
   width: max-content;
-  border-left: 1px solid grey;
-  border-right: 1px solid grey;
-  border-bottom: 1px solid grey;
+  border-left: 1px solid #ABB2BF;
+  border-right: 1px solid #ABB2BF;
+  border-bottom: 1px solid #ABB2BF;
   padding: 16px;
   font-size: 24px;
   font-weight: 400;

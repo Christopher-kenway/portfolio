@@ -7,6 +7,7 @@ import { Button } from "@mui/material";
 import Dots from "../assests/Dots.png";
 import Union from "../assests/Union.png";
 import Project from "../components/projectCard/Project";
+import Skills from "../components/skills/Skills";
 
 const Home = () => {
   return (
@@ -42,6 +43,7 @@ const Home = () => {
         </div>
 
         <Project />
+        <Skills />
       </div>
     </>
   );
