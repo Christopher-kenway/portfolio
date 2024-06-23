@@ -3,6 +3,7 @@ import "./Skills.css";
 import Grid from "@mui/material/Grid";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import Group from "../../assests/Group.png";
 
 const Skills = () => {
   const skillContent = [
@@ -32,30 +33,32 @@ const Skills = () => {
   return (
     <>
       <div className="sectiontitle__head">
-        <h2># Skills</h2>
+        <h2>#skills</h2>
         <div className="horizontal__line"></div>
       </div>
-      <Grid container spacing={2}>
-        {skillContent.map((skill, index) => (
-          <Grid
-            item
-            xs={12}
-            sm={6}
-            md={4}
-            className="skill__content"
-            key={index}
-          >
-            <CardContent className="cardContent">
-              <Typography gutterBottom className="title">
-                {skill.title}
-              </Typography>
-              <Typography gutterBottom className="tools">
-                {skill.tools}
-              </Typography>
-            </CardContent>
-          </Grid>
-        ))}
-      </Grid>
+      <div className="skill__content">
+        <img src={Group} />
+        <Grid
+          container
+          direction="row"
+          justifyContent="flex-end"
+          alignItems="flex-start"
+          spacing={2}
+        >
+          {skillContent.map((skill, index) => (
+            <Grid item xs={12} sm={6} md={4} key={index}>
+              <CardContent className="cardContent">
+                <Typography gutterBottom className="title">
+                  {skill.title}
+                </Typography>
+                <Typography gutterBottom className="tools">
+                  {skill.tools}
+                </Typography>
+              </CardContent>
+            </Grid>
+          ))}
+        </Grid>
+      </div>
     </>
   );
 };
