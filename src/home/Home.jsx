@@ -10,6 +10,7 @@ import Project from "../components/projectCard/Project";
 import Skills from "../components/skills/Skills";
 import About from "../components/about/About";
 import Contact from "../components/contacts/Contact";
+import Footer from "../components/footer/Footer";
 
 const Home = () => {
   return (
@@ -48,6 +49,7 @@ const Home = () => {
         <Skills />
         <About />
         <Contact />
+        <Footer />
       </div>
     </>
   );
