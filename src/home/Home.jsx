@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <div className="md:container md:mx-auto">
       <Sidebar />
-      <div className="container__home">
+      <div className="container__home lg:px-44 sm:px-20 md:px-24 mx-auto">
         <Navbar />
         <div className="herosection">
           <div className="section__content">
