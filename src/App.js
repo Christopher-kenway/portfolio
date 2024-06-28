@@ -1,5 +1,4 @@
 import React from 'react'
-import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from './components/sidebar/Sidebar';
 import Home from './home/Home'
@@ -11,7 +10,6 @@ function App() {
     <div className="App">
       <Routes>
          <Route path="/" element={<Home />} />
-       
       </Routes>
     </div>
 

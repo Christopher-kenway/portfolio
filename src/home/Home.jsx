@@ -14,7 +14,7 @@ import Footer from "../components/footer/Footer";
 
 const Home = () => {
   return (
-    <>
+    <div className="md:container md:mx-auto">
       <Sidebar />
       <div className="container__home">
         <Navbar />
@@ -43,14 +43,13 @@ const Home = () => {
             <div className="bottom-box">- Dr. Who</div>
           </div>
         </div>
-
         <Project />
         <Skills />
         <About />
         <Contact />
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 
