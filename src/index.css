@@ -9,41 +9,12 @@ body,
 #root,
 .app,
 .content {
-  margin: 0;
-  font-family: "Fira Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100%;
-  width: 100%;
-  background: #282C33;
   color: white;
-}
-
-.app{
-  display: flex;
-  position: relative;
-}
-
-::-webkit-scrollbar{
-  width: 10px;
-}
-
-/*Track*/
-::-webkit-scrollbar-track{
-  background: #ABB2BF
-}
-
-/*handle*/
-::-webkit-scrollbar-thumb{
-  background: #ABB2BF;
-}
-
-/*Handle on hover*/
-::-webkit-scrollbar-track:hover{
-  background: #555;
 }
 
 

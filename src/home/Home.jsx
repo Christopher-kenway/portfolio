@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "../components/sidebar/Sidebar";
 import "./Home.css";
 import { Link } from "react-router-dom";
@@ -18,7 +18,6 @@ const Home = () => {
       <Sidebar />
       <div className="container__home">
         <Navbar />
-
         <div className="herosection">
           <div className="section__content">
             <span className="section__info">

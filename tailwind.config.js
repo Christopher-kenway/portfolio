@@ -9,12 +9,15 @@ module.exports = {
       md: '768px',
       lg: '976px',
       xl: '1440px',
+      xxl: '1536px',
     },
     fontFamily: {
       sans: ['Fira Sans', 'sans-serif'],
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
 }
 

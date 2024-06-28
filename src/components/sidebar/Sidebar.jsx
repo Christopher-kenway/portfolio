@@ -7,10 +7,14 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 const Sidebar = () => {
   return (
-    <div className="sidebar__nav">
-      <div className="vl"></div>
-      <ul>
-        <NavLink className="link__icons">
+    <div
+      className="fixed top-0 left-0 z-40 w-24 h-screen transition-transform -translate-x-full  sm:translate-x-0 "
+      aria-label="Sidebar"
+    >
+      {/*VERTICAL LINE*/}
+      <ul className="items-center flex flex-col">
+        <div className="w-px h-48 bg-gray-400"></div>
+        <NavLink className="items-center flex flex-col mt-2 gap-4">
           <GitHubIcon className="social__icons" sx={{ fontSize: 21 }} />
           <LinkedInIcon className="social__icons" sx={{ fontSize: 21 }} />
           <InstagramIcon className="social__icons" sx={{ fontSize: 21 }} />

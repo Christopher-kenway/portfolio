@@ -1,11 +1,4 @@
-.container__nav{
-  display: flex;
-  align-items: center;
-  margin-inline: auto;
-  justify-content: space-between;
-  margin-top: 25px;
-  padding: 10px 0;
-}
+
 .logo{
   display: block;
 }

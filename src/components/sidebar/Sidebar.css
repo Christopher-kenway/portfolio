@@ -1,32 +1,3 @@
-.sidebar__nav{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  width: 40px;
-  position: absolute;
-  top: 0;
-  z-index: 3;
-  color:  #ABB2BF;
-}
-
-.vl {
-  border-left: 1px solid;
-  height: 191px;
-}
-
-ul{
-  margin: 0;
-  padding: 0;
-}
-
-.link__icons{
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 3px;
-}
 
 .social__icons{
   color: #ABB2BF;
