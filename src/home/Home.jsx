@@ -14,9 +14,9 @@ import Footer from "../components/footer/Footer";
 
 const Home = () => {
   return (
-    <div className="md:container md:mx-auto">
+    <>
       <Sidebar />
-      <div className="container__home lg:px-44 sm:px-20 md:px-24 mx-auto">
+      <div className="absolute inset-x-24 top-0 z-50">
         <Navbar />
         <div className="herosection">
           <div className="section__content">
@@ -49,7 +49,7 @@ const Home = () => {
         <Contact />
         <Footer />
       </div>
-    </div>
+    </>
   );
 };
 

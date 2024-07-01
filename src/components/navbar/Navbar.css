@@ -1,15 +1,5 @@
-
-.nav__navlinks{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  
-}
-
 .navlink {
   color: #ABB2BF;
-  display: block;
   font-size: 16px;
   letter-spacing: 1px;
   text-decoration: none;
@@ -21,6 +11,6 @@
   translate: 0px 2px;
 }
 
-/* .navlink.active{
-  color: #C778DD;
-} */
+  /* .navlink.active{
+    color: #C778DD;
+  } */
