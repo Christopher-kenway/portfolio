@@ -1,6 +1,6 @@
 import React from "react";
 import Sidebar from "../components/sidebar/Sidebar";
-import Navbar from "../components/navbar/Navbar";
+import Navbar from "../components/projectCard/navbar/Navbar";
 import "./Home.css";
 import { Button } from "@mui/material";
 import Dots from "../assets/Dots.png";
