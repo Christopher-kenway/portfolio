@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import Logo from "../../assests/Logo.png";
+import Logo from "../../assets/Logo.png";
 import ShortTextIcon from "@mui/icons-material/ShortText";
-import { Dialog, DialogPanel } from "@headlessui/react";
 import CloseIcon from "@mui/icons-material/Close";
+import { Dialog, DialogPanel } from "@headlessui/react";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -22,14 +22,20 @@ const Navbar = () => {
           <img className="h-6 w-auto" src={Logo} alt="Logo" />
         </Link>
       </div>
-      <div className="flex lg:hidden flex-1 items-end justify-end">
+      <div className="flex lg:hidden">
         <button
           type="button"
           className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
-          onClick={() => setMobileMenuOpen(true)}
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
-          <span className="sr-only">Open main menu</span>
-          <ShortTextIcon className="h-6 w-6" aria-hidden="true" />
+          <span className="sr-only">
+            {mobileMenuOpen ? "Close main menu" : "Open main menu"}
+          </span>
+          {mobileMenuOpen ? (
+            <CloseIcon className="h-6 w-6" aria-hidden="true" />
+          ) : (
+            <ShortTextIcon className="h-6 w-6" aria-hidden="true" />
+          )}
         </button>
       </div>
 
@@ -38,7 +44,7 @@ const Navbar = () => {
           <NavLink
             key={item.name}
             className="navlink"
-            exact
+            exact="true"
             activeClassName="active"
             to={item.href}
           >
@@ -51,8 +57,11 @@ const Navbar = () => {
         open={mobileMenuOpen}
         onClose={() => setMobileMenuOpen(false)}
       >
-        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-24 py-6">
-          <div className="flex flex-1 items-end justify-end">
+        <DialogPanel className="fixed inset-0 z-50 overflow-y-auto bg-gray-900 bg-opacity-95 py-6">
+          <div className="flex items-center justify-between px-4">
+            <Link to="/" className="-m-1.5 p-1.5">
+              <img className="h-6 w-auto" src={Logo} alt="Logo" />
+            </Link>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5"
@@ -62,18 +71,22 @@ const Navbar = () => {
               <CloseIcon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          <nav className="mt-6 flow-root">
-            {navigation.map((item) => (
-              <NavLink
-                key={item.name}
-                className="navlink -mx-3 block rounded-lg px-3 py-2"
-                exact
-                activeClassName="active"
-                to={item.href}
-              >
-                #{item.name}
-              </NavLink>
-            ))}
+          <nav className="mt-6 px-4">
+            <ul className="space-y-4">
+              {navigation.map((item) => (
+                <li key={item.name}>
+                  <NavLink
+                    className="navlink block rounded-lg px-3 py-2 text-white"
+                    exact="true"
+                    activeClassName="active"
+                    to={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    #{item.name}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
           </nav>
         </DialogPanel>
       </Dialog>

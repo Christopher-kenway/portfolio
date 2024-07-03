@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography } from "@mui/material";
-import aboutme from "../../assests/aboutme.png";
+import aboutme from "../../assets/aboutme.png";
 
 import "./About.css";
 

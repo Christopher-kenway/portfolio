@@ -1,0 +1,27 @@
+.navlink {
+  color: #ABB2BF;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navlink:hover{
+  color: white;
+  translate: 0px 2px;
+}
+
+  .navlink:hover,
+  .navlink.active {
+    color: #C778DD;
+  }
+  
+  .navlink.active {
+    font-weight: bold;
+  }
+  
+  @media (max-width: 1024px) {
+    .navbar {
+      padding-left: 24px; /* Adjust this value if needed */
+    }
+  }

@@ -3,7 +3,7 @@ import "./Skills.css";
 import Grid from "@mui/material/Grid";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import Group from "../../assests/Group.png";
+import Group from "../../assets/Group.png";
 
 const Skills = () => {
   const skillContent = [

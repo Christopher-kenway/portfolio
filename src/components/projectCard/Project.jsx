@@ -7,9 +7,9 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { Grid, Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import skyseer from "../../assests/skyseer.png";
-import moviebox from "../../assests/moviebox.png";
-import visio from "../../assests/visio.png";
+import skyseer from "../../assets/skyseer.png";
+import moviebox from "../../assets/moviebox.png";
+import visio from "../../assets/visio.png";
 
 const Project = () => {
   const Projects = [
