@@ -1,6 +1,6 @@
 import React from "react";
 import Sidebar from "../components/sidebar/Sidebar";
-import Navbar from "../components/projectCard/navbar/Navbar";
+import Navbar from "../components/navbar/Navbar";
 import "./Home.css";
 import { Button } from "@mui/material";
 import Dots from "../assets/Dots.png";
@@ -15,9 +15,9 @@ const Home = () => {
   return (
     <>
       <Sidebar />
-      <div className="pl-24">
+      <div className="px-24">
         <Navbar />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto">
           <div className="herosection">
             <div className="section__content">
               <span className="section__info">
