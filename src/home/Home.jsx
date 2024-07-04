@@ -3,7 +3,7 @@ import Sidebar from "../components/sidebar/Sidebar";
 import Navbar from "../components/navbar/Navbar";
 import "./Home.css";
 import { Button } from "@mui/material";
-import Dots from "../assets/Dots.png";
+import hero from "../assets/hero.jpg";
 import Union from "../assets/Union.png";
 import Project from "../components/projectCard/Project";
 import Skills from "../components/skills/Skills";
@@ -15,25 +15,28 @@ const Home = () => {
   return (
     <>
       <Sidebar />
-      <div className="px-24">
+      <div className="pl-36 pr-4 mx-auto">
         <Navbar />
-        <div className="container mx-auto">
+        <div className="container relative mx-auto">
           <div className="herosection">
-            <div className="section__content">
-              <span className="section__info">
-                <h1>MXXXX is a web designer and front-end developer</h1>
+            <div className="section__content  overflow-hidden">
+              <div className="section__info relative  lg:px-8 gap-10 text-left z-40">
+                <h1 className="">
+                  MXXXX is a web designer and front-end developer
+                </h1>
                 <h3>
                   He crafts responsive websites where technologies meet
                   creativity
                 </h3>
-                <Button className="hero_btn" variant="outlined">
+                <Button
+                  type="button"
+                  className="hero_btn -m-2.5 inline-flex items-center justify-center"
+                  variant="outlined"
+                >
                   Contact me!!
                 </Button>
-              </span>
-              <span>
-                <img src={Dots} alt="Dots" />
-                <img src={Union} alt="Union" />
-              </span>
+              </div>
+              <img className="z-0" src={hero} alt="Hero" />
             </div>
           </div>
           <div className="quote__container">

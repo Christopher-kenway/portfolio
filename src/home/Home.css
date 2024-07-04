@@ -12,9 +12,7 @@
 }
 
 .section__info{
-  display: block;
-  flex-direction: column;
-  width: 40%;
+  border: 1px solid red;
 }
 
 .section__info > h1 {
