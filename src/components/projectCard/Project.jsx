@@ -4,61 +4,42 @@ import ArrowRightAltSharpIcon from "@mui/icons-material/ArrowRightAltSharp";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import { Grid, Button } from "@mui/material";
+import { Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import skyseer from "../../assets/skyseer.png";
-import moviebox from "../../assets/moviebox.png";
-import visio from "../../assets/visio.png";
+import { Projects } from "../../data";
 
 const Project = () => {
-  const Projects = [
-    {
-      title: "Skyseer",
-      description:
-        "Vanilla JS weather app utilizes OpenWeatherMap, Open-Meteo APIs.",
-      tools: "HTML CSS JS",
-      link: "sky-seer.vercel.app",
-      imageUrl: skyseer,
-    },
-    {
-      title: "Moviebox",
-      description:
-        "Vanilla JS weather app utilizes OpenWeatherMap, Open-Meteo APIs.",
-      tools: "react firebase",
-      link: "https://movie-app-273e2.web.app/",
-      imageUrl: moviebox,
-    },
-    {
-      title: "Visio",
-      description:
-        "Visionary photo-sharing platform. Upload. Curate. Enhance. Socialize.",
-      tools: "react daisyUI tailwindcss firebase",
-      link: "image-gallery-cb37d.web.app/",
-      imageUrl: visio,
-    },
-  ];
   return (
-    <div className="projects">
+    <div className="projects py-14 sm:py-20">
       <div className="sectiontitle__head">
-        <h2>#Projects</h2>
+        <h2>
+          <span className="text-purple">#</span>Projects
+        </h2>
         <div className="horizontal__line"></div>
-        <span>
+        <span className="cursor-pointer">
           View all <ArrowRightAltSharpIcon sx={{ fontSize: 41 }} />
         </span>
       </div>
 
-      <Grid container spacing={1} className="project-list">
+      <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-20">
         {Projects.map((project, index) => (
-          <Card className="project-card" key={index} sx={{ maxWidth: 360 }}>
-            <CardMedia
-              className="card-media"
-              sx={{ height: 230 }}
-              image={project.imageUrl}
-              title={project.title}
-            />
+          <Card className="project-card h-fit lg:w-80" key={index}>
+            <div
+              className="aspect-h-1 aspect-w-1 overflow-hidden
+              lg:aspect-none h-full"
+            >
+              <img
+                className="h-full w-full object-cover object-center lg:h-60 lg:w-full"
+                src={project.imageUrl}
+                alt={project.title}
+              />
+            </div>
             <CardContent className="card-content">
-              <Typography gutterBottom variant="h7" component="div">
+              <Typography
+                gutterBottom
+                variant="h7"
+                className="h-fit flex items-center"
+              >
                 {project.tools}
               </Typography>
               <Typography gutterBottom variant="h5" component="div">
@@ -73,7 +54,7 @@ const Project = () => {
             </CardActions>
           </Card>
         ))}
-      </Grid>
+      </div>
     </div>
   );
 };

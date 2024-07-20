@@ -7,7 +7,7 @@ import Home from './home/Home'
 function App() {
   return ( 
    
-    <div className="App">
+    <div className="App min-h-full">
       <Routes>
          <Route path="/" element={<Home />} />
       </Routes>

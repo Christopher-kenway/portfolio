@@ -4,11 +4,6 @@
   margin-top: 5rem;
 }
 
-.project-list{
-  justify-content: space-between;
-  padding-top: 3rem;
-  padding-bottom: 5rem;
-}
 
 .project-card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -30,12 +25,12 @@
   border-radius: 1px;
 }
 
-.project-card .MuiCardMedia-root {
+.project-card img{
   transition: transform 0.3s ease-in-out;
   will-change: transform;
 }
 
-.project-card:hover .MuiCardMedia-root {
+.project-card:hover img {
   transform: translateY(-11.5px) scale(1.1);
 }
 
@@ -47,7 +42,6 @@
 
 .project-card .MuiTypography-h5 {
   font-size: 24px;
-  line-height: 32px;
   font-weight: 600;
   letter-spacing: 2px;
   color: #ebe9e9;

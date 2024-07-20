@@ -1,46 +1,26 @@
 .herosection{
-  margin-top: 100px;
   display: flex;
   flex-direction: column;
 }
 
-.section__content{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .section__info{
-  border: 1px solid red;
+  color: #ABB2BF;
 }
 
-.section__info > h1 {
-font-size: 36px;
-font-weight: 600;
-line-height: 42px;
-text-align: left;
-color: whitesmoke;
-margin-bottom: 2rem;
-}
 
 .section__info > h3 { 
-font-size: 19px;
-font-weight: 400;
-line-height: 25px;
-text-align: left;
 color: #ABB2BF;
 }
 
 .hero_btn{
-padding: 8px 16px 8px 16px;
-border: 1px solid #C778DD;
-border-radius: 1px;
-font-size: 16px;
-font-weight: 500;
-line-height: 21px;
-text-transform: capitalize;
-color: #f1f2f4;
+  padding: 8px 16px 8px 16px;
+  border: 1px solid #C778DD;
+  border-radius: 1px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21px;
+  text-transform: capitalize;
+  color: #f1f2f4;
 }
 
 .quote__container {
@@ -64,7 +44,6 @@ position: relative;
   padding: 32px;
   font-size: 24px;
   font-weight: 400;
-  line-height: 32px;
 }
 
 .bottom-box{
