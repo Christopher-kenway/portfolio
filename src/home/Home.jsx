@@ -16,10 +16,10 @@ const Home = () => {
       <div className="md:container md:mx-auto mx-auto max-w-7xl px-4 sm:px-6 lg:px-36">
         <Header />
         <Project />
-        {/* <Skills />
+        <Skills />
         <About />
         <Contact />
-        <Footer /> */}
+        {/* <Footer /> */}
       </div>
     </>
   );

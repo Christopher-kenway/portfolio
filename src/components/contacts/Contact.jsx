@@ -7,9 +7,11 @@ import { Mail } from "@mui/icons-material";
 
 const Contact = () => {
   return (
-    <div className="contact__section">
+    <div className="mt-9 mb-9">
       <div className="sectiontitle__head">
-        <h2>#contact</h2>
+        <h2 className="text-white">
+          <span className="text-purple">#</span>contacts
+        </h2>
         <div className="horizontal__line"></div>
       </div>
 

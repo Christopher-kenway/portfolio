@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Project.css";
 import ArrowRightAltSharpIcon from "@mui/icons-material/ArrowRightAltSharp";
 import Card from "@mui/material/Card";
@@ -9,10 +9,16 @@ import Typography from "@mui/material/Typography";
 import { Projects } from "../../data";
 
 const Project = () => {
+  const [expanded, setExpanded] = useState(false);
+
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
+
   return (
-    <div className="projects py-14 sm:py-20">
+    <div className="mt-14 py-14 sm:py-20">
       <div className="sectiontitle__head">
-        <h2>
+        <h2 className="text-white">
           <span className="text-purple">#</span>Projects
         </h2>
         <div className="horizontal__line"></div>
@@ -21,9 +27,9 @@ const Project = () => {
         </span>
       </div>
 
-      <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-20">
+      <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-14">
         {Projects.map((project, index) => (
-          <Card className="project-card h-fit lg:w-80" key={index}>
+          <Card className="project-card h-fit lg:w-full" key={index}>
             <div
               className="aspect-h-1 aspect-w-1 overflow-hidden
               lg:aspect-none h-full"

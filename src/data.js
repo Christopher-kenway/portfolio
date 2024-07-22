@@ -35,12 +35,30 @@ export const Projects = [
     link: "image-gallery-cb37d.web.app/",
     imageUrl: visio,
   },
-  {
-    title: "Visio",
-    description:
-      "Visionary photo-sharing platform. Upload. Curate. Enhance. Socialize.",
-    tools: "react daisyUI tailwindcss firebase",
-    link: "image-gallery-cb37d.web.app/",
-    imageUrl: visio,
-  },
+
 ];
+
+
+ export  const skillContent = [
+    {
+      title: "Languages",
+      tools: "Javascript Python TypeScript Lua",
+    },
+    {
+      title: "Databases",
+      tools: "SQLite Mongo POSTgreSQL Firebase",
+    },
+    {
+      title: "Tools",
+      tools:
+        "VScode Bootstrap Tailwindcss MaterialUI DaisyUI FramerMotion GASP",
+    },
+    {
+      title: "Other",
+      tools: "HTML CSS SCSS RestAPI EJS",
+    },
+    {
+      title: "Frameworks",
+      tools: "ReactJS",
+    },
+  ];
