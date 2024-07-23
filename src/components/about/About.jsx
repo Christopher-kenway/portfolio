@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className="mt-10 py-1 sm:py-20">
       <div className="sectiontitle__head">
-        <h2 className="text-white">
+        <h2 className="text-gray text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           <span className="text-purple">#</span>about me
         </h2>
         <div className="horizontal__line"></div>

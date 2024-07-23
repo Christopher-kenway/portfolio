@@ -15,19 +15,21 @@ const Contact = () => {
         <div className="horizontal__line"></div>
       </div>
 
-      <div className="contact__info">
-        <p>
-          I'm interested in freelance opportunities. However, if you have other
-          request or question, don't hesitate to contact me
-        </p>
-        <div className="socials__box">
-          message me here
+      <div className="mt-5 mx-auto flex flex-col lg:flex-row sm:flex-col justify-between">
+        <div className="">
+          <p className="mb-4 leading-8">
+            I'm interested in freelance opportunities. However, if you have
+            other request or question, don't hesitate to contact me
+          </p>
+        </div>
+        <div className="border  p-5 gap-4 flex flex-col">
+          <span>message me here</span>
           <Link>
-            <GitHub className="social__icons" sx={{ fontSize: 21 }} />
+            <GitHub className="" sx={{ fontSize: 20 }} />
             {"Christopher-kenway"}
           </Link>
           <Link>
-            <Mail className="social__icons" sx={{ fontSize: 21 }} />
+            <Mail className="" sx={{ fontSize: 20 }} />
             {"maero1eguwe@gmail.com"}
           </Link>
         </div>

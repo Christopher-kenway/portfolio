@@ -19,7 +19,10 @@ const Home = () => {
         <Skills />
         <About />
         <Contact />
-        {/* <Footer /> */}
+      </div>
+      <div className="border-t-2 border-gray-200">
+        {" "}
+        <Footer />
       </div>
     </>
   );
