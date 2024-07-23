@@ -56,7 +56,15 @@ const Project = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small">live</Button>
+              <Button size="small">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  live
+                </a>
+              </Button>
             </CardActions>
           </Card>
         ))}

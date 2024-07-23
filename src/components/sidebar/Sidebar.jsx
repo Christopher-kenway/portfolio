@@ -12,15 +12,27 @@ const Sidebar = () => {
       <ul className="flex flex-col items-center justify-center h-full">
         <div className="w-px h-48 bg-purple"></div>
         <div className="flex flex-col items-center mt-4 gap-4">
-          <NavLink to="#">
+          <a
+            href="https://github.com/Christopher-kenway"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <GitHubIcon className="social__icons" sx={{ fontSize: 21 }} />
-          </NavLink>
-          <NavLink to="#">
+          </a>
+          <a
+            href="https://www.linkedin.com/in/oghenemaero-eguwe-490b2a1a6/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <LinkedInIcon className="social__icons" sx={{ fontSize: 21 }} />
-          </NavLink>
-          <NavLink to="#">
+          </a>
+          <a
+            href="https://www.instagram.com/_bluegumgum/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <InstagramIcon className="social__icons" sx={{ fontSize: 21 }} />
-          </NavLink>
+          </a>
         </div>
       </ul>
     </div>

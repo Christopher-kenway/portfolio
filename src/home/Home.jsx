@@ -12,13 +12,26 @@ const Home = () => {
   return (
     <>
       <Sidebar />
-
       <div className="md:container md:mx-auto mx-auto max-w-7xl px-4 sm:px-6 lg:px-36">
-        <Header />
-        <Project />
-        <Skills />
-        <About />
-        <Contact />
+        <div id="header">
+          <Header />
+        </div>
+
+        <div id="projects">
+          <Project />
+        </div>
+
+        <div id="skills">
+          <Skills />
+        </div>
+
+        <div id="aboutme" className="section">
+          <About />
+        </div>
+
+        <div id="contacts" className="section">
+          <Contact />
+        </div>
       </div>
       <div className="border-t-2 border-gray-200">
         {" "}

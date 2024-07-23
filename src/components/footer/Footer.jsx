@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
           <div className="text-center  mx-auto">
             <span className="mt-9 text-sm text-gray-500 sm:text-center dark:text-gray-400">
-              © Copyright 2022. Made by Israel sanyaolu
+              © Copyright 2024. Made by Israel sanyaolu
             </span>
           </div>
         </div>

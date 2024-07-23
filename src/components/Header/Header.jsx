@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import Logo from "../../assets/Logo.png";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -13,8 +13,10 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <>
-      <nav
+    <div className="h-screen">
+      <motion.nav
+        initial={{}}
+        animate={{}}
         className="flex items-center justify-between py-10 top-0 z-50 w-full lg:py-10 md:py-10 sm:py-10"
         aria-label="Global"
       >
@@ -41,18 +43,19 @@ const Header = () => {
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
-            <NavLink
+            <motion.a
+              animate={{}}
               key={item.name}
               className="navlink text-sm font-semibold leading-6 text-gray-900"
               exact
               activeClassName="active"
-              to={item.href}
+              href={`#${item.href}`}
             >
               #{item.name}
-            </NavLink>
+            </motion.a>
           ))}
         </div>
-      </nav>
+      </motion.nav>
       <Dialog
         className="lg:hidden"
         open={mobileMenuOpen}
@@ -79,16 +82,16 @@ const Header = () => {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 {navigation.map((item) => (
-                  <NavLink
+                  <Link
                     key={item.name}
                     className="navlink -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7"
                     exact
                     activeClassName="active"
-                    to={item.href}
+                    to={`#${item.href}`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     #{item.name}
-                  </NavLink>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -98,12 +101,15 @@ const Header = () => {
       <motion.div animate={{}}>
         <div className="herosection mt-24 relative isolate px-6 pt-14 lg:px-8">
           <div className="section__content flex overflow-hidden">
-            <div className="section__info text-left">
-              <h1 className="text-5xl font-bold tracking-wide">
+            <motion.div animate={{}} className="section__info text-left">
+              <motion.h1
+                animate={{}}
+                className="text-5xl font-bold tracking-wide"
+              >
                 XXXXX is a <span className="text-purple">web designer </span>
                 and
                 <span className="text-purple"> front-end developer</span>
-              </h1>
+              </motion.h1>
               <h3 className="mt-6 text-lg leading-8">
                 He crafts responsive websites where technologies meet creativity
               </h3>
@@ -113,19 +119,19 @@ const Header = () => {
               >
                 Contact me!!
               </Button>
-            </div>
+            </motion.div>
           </div>
         </div>
         <div className="mt-10 text-center">
           <div className="quote-box">
-            <div className="top-box">
+            <motion.div className="top-box">
               With great power comes great electricity bill
-            </div>
+            </motion.div>
             <div className="bottom-box">- Dr. Who</div>
           </div>
         </div>
       </motion.div>
-    </>
+    </div>
   );
 };
 
