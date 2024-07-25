@@ -8,18 +8,23 @@ const Footer = () => {
           <div className="sm:flex sm:items-center sm:justify-between">
             <a
               href="https://flowbite.com/"
-              class="flex items-center mb-4 sm:mb-0 space-x-1 rtl:space-x-reverse"
+              className="flex items-center mb-4 sm:mb-0 space-x-1 rtl:space-x-reverse"
             >
-              <img src={Logo} class="h-6" alt="Flowbite Logo" />
+              <img src={Logo} className="h-6" alt="Flowbite Logo" />
               <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                 XXXXX
               </span>
             </a>
           </div>
-          <div className="text-center  mx-auto">
-            <span className="mt-9 text-sm text-gray-500 sm:text-center dark:text-gray-400">
-              © Copyright 2024. Made by Israel sanyaolu
-            </span>
+          <div className="flex align-center justify-center mx-auto">
+            <a
+              className="mt-9 text-sm text-gray-500 sm:text-center dark:text-gray-400"
+              href="https://www.linkedin.com/in/israel-sanyaolu-69055023a/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              © Copyright 2024. Designed by Israel sanyaolu
+            </a>
           </div>
         </div>
       </footer>

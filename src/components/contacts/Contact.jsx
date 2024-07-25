@@ -1,8 +1,7 @@
 import React from "react";
 import "./Contact.css";
 import { Typography } from "@mui/material";
-import { Link } from "react-router-dom";
-import GitHub from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { Mail } from "@mui/icons-material";
 
 const Contact = () => {
@@ -24,14 +23,22 @@ const Contact = () => {
         </div>
         <div className="border  p-5 gap-4 flex flex-col">
           <span>message me here</span>
-          <Link>
-            <GitHub className="" sx={{ fontSize: 20 }} />
-            {"Christopher-kenway"}
-          </Link>
-          <Link>
-            <Mail className="" sx={{ fontSize: 20 }} />
+          <a
+            href="https://www.linkedin.com/in/oghenemaero-eguwe-490b2a1a6/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkedInIcon sx={{ fontSize: 20 }} />
+            {"Oghenemaero Eguwe"}
+          </a>
+          <a
+            href="https://maero1eguwe@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Mail sx={{ fontSize: 20 }} />
             {"maero1eguwe@gmail.com"}
-          </Link>
+          </a>
         </div>
       </div>
     </div>

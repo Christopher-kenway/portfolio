@@ -15,6 +15,9 @@ const About = () => {
         <div className="flex flex-col w-full lg:w-full align-center justify-between sm:flex-col md:flex-col lg:flex-row sm:gap-16 md:gap-16 lg:gap-20">
           <img className="mb-10 hidden lg:block" src={aboutme} alt="maero" />
           <div className="flex flex-col gap-5 w-full text-left my-auto lg:text-right sm:text-left">
+            <p className="tracking-wider font-extrabold">
+              !!!!! NIGGA CHANGE THAT CORNY ASS PICTURE !!!!!!
+            </p>
             <p className="tracking-wider">Hello, i'm Maero!</p>
             <p className="tracking-wider">
               I'm a self-taught front-end developer based in Lagos, Nigeria,

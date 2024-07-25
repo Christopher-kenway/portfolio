@@ -1,22 +1,46 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useLayoutEffect } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import Logo from "../../assets/Logo.png";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import "./Navbar.css";
-import { Button } from "@mui/material";
-import Union from "../../assets/Union.png";
-import { motion } from "framer-motion";
+import { Button, duration } from "@mui/material";
 import { navigation } from "../../data";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { Timeline } from "gsap/gsap-core";
+import { Opacity } from "@mui/icons-material";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const header = useRef(null);
+  const content = useRef(null);
+
+  useLayoutEffect(() => {
+    // Set visibility of header to visible
+    gsap.to(header.current, { visibility: "visible" });
+
+    // Define the animation timeline for elements in the content section
+    let ctx = gsap.context(() => {
+      const t1 = gsap.timeline();
+      t1.from(
+        ["#title1", "#title2", "#title3", "#title4", "#title5", "#title6"],
+        {
+          opacity: 0,
+          y: "+=30",
+          stagger: 0.5,
+        }
+      );
+    }, content);
+
+    // Cleanup function to revert GSAP context
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div className="h-screen">
-      <motion.nav
-        initial={{}}
-        animate={{}}
+    <div className="max-h-screen">
+      <nav
         className="flex items-center justify-between py-10 top-0 z-50 w-full lg:py-10 md:py-10 sm:py-10"
         aria-label="Global"
       >
@@ -43,8 +67,7 @@ const Header = () => {
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
-            <motion.a
-              animate={{}}
+            <a
               key={item.name}
               className="navlink text-sm font-semibold leading-6 text-gray-900"
               exact
@@ -52,10 +75,10 @@ const Header = () => {
               href={`#${item.href}`}
             >
               #{item.name}
-            </motion.a>
+            </a>
           ))}
         </div>
-      </motion.nav>
+      </nav>
       <Dialog
         className="lg:hidden"
         open={mobileMenuOpen}
@@ -98,39 +121,51 @@ const Header = () => {
           </div>
         </DialogPanel>
       </Dialog>
-      <motion.div animate={{}}>
-        <div className="herosection mt-24 relative isolate px-6 pt-14 lg:px-8">
+
+      <div className="herosection" ref={header}>
+        <div className="mt-24 relative isolate px-6 pt-14 lg:px-8">
           <div className="section__content flex overflow-hidden">
-            <motion.div animate={{}} className="section__info text-left">
-              <motion.h1
-                animate={{}}
-                className="text-5xl font-bold tracking-wide"
+            <div ref={content} className="section__info w-full">
+              <h1 id="title1" className="text-5xl font-bold tracking-wide">
+                XXXXX
+              </h1>
+              <h1
+                id="title2"
+                className="text-purple text-6xl font-bold tracking-wider"
               >
-                XXXXX is a <span className="text-purple">web designer </span>
+                Web designer
+              </h1>
+              <h1 id="title3" className="text-5xl font-bold tracking-wide">
                 and
-                <span className="text-purple"> front-end developer</span>
-              </motion.h1>
-              <h3 className="mt-6 text-lg leading-8">
-                He crafts responsive websites where technologies meet creativity
+              </h1>
+              <h1
+                id="title4"
+                className="text-purple text-6xl font-bold tracking-wider"
+              >
+                Web developer
+              </h1>
+              <h3 id="title5" className="mt-2 text-lg leading-8">
+                Crafting responsive websites where technologies meet creativity
               </h3>
               <Button
+                id="title6"
                 type="button"
-                className="hero_btn py-2 px-4 rounded text-lg font-medium text-white"
+                className="hero_btn py-2 px-4 rounded text-lg font-medium text-white border-2 border-purple"
               >
                 Contact me!!
               </Button>
-            </motion.div>
+            </div>
           </div>
         </div>
         <div className="mt-10 text-center">
           <div className="quote-box">
-            <motion.div className="top-box">
+            <div className="top-box">
               With great power comes great electricity bill
-            </motion.div>
+            </div>
             <div className="bottom-box">- Dr. Who</div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };

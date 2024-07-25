@@ -1,3 +1,7 @@
+.herosection{
+ visibility: hidden;
+}
+
 .navlink {
   color: #ABB2BF;
   font-size: 1rem;
