@@ -22,9 +22,6 @@ const Project = () => {
           <span className="text-purple">#</span>Projects
         </h2>
         <div className="horizontal__line"></div>
-        <span className="cursor-pointer">
-          View all <ArrowRightAltSharpIcon sx={{ fontSize: 41 }} />
-        </span>
       </div>
 
       <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-14">
