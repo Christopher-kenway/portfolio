@@ -1,4 +1,4 @@
-import React, { useState, useRef, useLayoutEffect } from "react";
+import React, { useState, useRef, useLayoutEffect, useEffect } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import Logo from "../../assets/Logo.png";
 import { Dialog, DialogPanel } from "@headlessui/react";
@@ -10,38 +10,65 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Timeline } from "gsap/gsap-core";
 import { Opacity } from "@mui/icons-material";
+import OutboundIcon from "@mui/icons-material/Outbound";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const [isScrolled, setIsScrolled] = useState(false);
   const header = useRef(null);
   const content = useRef(null);
+
+  useGSAP(() => {
+    gsap.to(".irotate", {
+      rotation: 360,
+      duration: 1,
+      repeat: 1,
+      scale: 1.1,
+      repeatDelay: 1,
+    });
+  });
+
+  // Check if page is scrolled
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useLayoutEffect(() => {
     // Set visibility of header to visible
     gsap.to(header.current, { visibility: "visible" });
 
-    // Define the animation timeline for elements in the content section
     let ctx = gsap.context(() => {
       const t1 = gsap.timeline();
-      t1.from(
-        ["#title1", "#title2", "#title3", "#title4", "#title5", "#title6"],
-        {
-          opacity: 0,
-          y: "+=30",
-          stagger: 0.5,
-        }
-      );
-    }, content);
+      t1.from(["#title1", "#title2", "#title3", "#title4", "#title5"], {
+        opacity: 0,
+        y: "+=250",
 
-    // Cleanup function to revert GSAP context
+        ease: "circ.out",
+        duration: 1.5,
+        stagger: 0.5,
+      });
+    }, content);
     return () => ctx.revert();
   }, []);
 
   return (
     <div className="max-h-screen">
       <nav
-        className="flex items-center justify-between py-10 top-0 z-50 w-full lg:py-10 md:py-10 sm:py-10"
+        className={`navbar ${
+          isScrolled ? "navbar-scrolled" : "navbar-default"
+        } navbar-margin flex items-center justify-between py-10 lg:py-8 md:py-10 sm:py-10`}
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -123,37 +150,46 @@ const Header = () => {
       </Dialog>
 
       <div className="herosection" ref={header}>
-        <div className="mt-24 relative isolate px-6 pt-14 lg:px-8">
+        <div className="mt-1 relative isolate">
           <div className="section__content flex overflow-hidden">
             <div ref={content} className="section__info w-full">
-              <h1 id="title1" className="text-5xl font-bold tracking-wide">
-                XXXXX
+              <h1 id="title1" className="text-9xl font-bold tracking-wide">
+                Creative
               </h1>
               <h1
                 id="title2"
-                className="text-purple text-6xl font-bold tracking-wider"
+                className="text-purple text-9xl font-bold tracking-wider"
               >
                 Web designer
               </h1>
-              <h1 id="title3" className="text-5xl font-bold tracking-wide">
-                and
+              <h1 id="title3" className="text-9xl font-bold tracking-wide">
+                And
               </h1>
               <h1
                 id="title4"
-                className="text-purple text-6xl font-bold tracking-wider"
+                className=" flex text-purple text-9xl font-bold tracking-wider items-center"
               >
-                Web developer
+                Web devel
+                <span>
+                  <a
+                    href="https://example.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <OutboundIcon
+                      className="irotate"
+                      sx={{ fontSize: 92, marginTop: 3 }}
+                    />
+                  </a>
+                </span>
+                per
               </h1>
-              <h3 id="title5" className="mt-2 text-lg leading-8">
+              <h3
+                id="title5"
+                className="mt-2 text-lg leading-8 italic text-wider"
+              >
                 Crafting responsive websites where technologies meet creativity
               </h3>
-              <Button
-                id="title6"
-                type="button"
-                className="hero_btn py-2 px-4 rounded text-lg font-medium text-white border-2 border-purple"
-              >
-                Contact me!!
-              </Button>
             </div>
           </div>
         </div>

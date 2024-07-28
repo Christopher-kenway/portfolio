@@ -1,3 +1,21 @@
+
+/* Styles for the default state of the navbar */
+.navbar-default {
+  transition: background-color 0.3s ease, padding 0.3s ease;
+  background-color: transparent;
+}
+
+/* Styles for the scrolled state of the navbar */
+.navbar-scrolled {
+  background-color: rgb(40, 44, 51); /* Or any desired color */
+  padding: 10px 30px; /* Reduce padding when scrolled */
+}
+
+/* Optional: Add some margin to the sides */
+.navbar-margin {
+  margin: 0 15px; /* Adjust margin as needed */
+}
+
 .herosection{
  visibility: hidden;
 }
